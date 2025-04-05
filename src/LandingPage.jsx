@@ -1,4 +1,7 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 export default function LandingPage() {
   return (
@@ -53,7 +56,7 @@ export default function LandingPage() {
             rel="noopener noreferrer"
             className="hover:text-orange-500"
           >
-            📘
+            <FontAwesomeIcon icon={faFacebook} />
           </a>
           <a
             href="https://instagram.com"
@@ -61,13 +64,13 @@ export default function LandingPage() {
             rel="noopener noreferrer"
             className="hover:text-orange-500"
           >
-            📸
+            <FontAwesomeIcon icon={faInstagram} />
           </a>
           <a
             href="mailto:contacto@proteccionycontrol.com"
             className="hover:text-orange-500"
           >
-            📧
+            <FontAwesomeIcon icon={faEnvelope} />
           </a>
         </div>
         <p>📍 Ciudad de Panamá, Panamá</p>
