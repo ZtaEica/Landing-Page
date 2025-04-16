@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import Form from './components/ContactanosForm';
 
 export default function LandingPage() {
+  const [isFormOpen, setIsFormOpen] = useState(false);
   return (
     <div className="min-h-screen bg-[#f8f9fa] flex flex-col items-center justify-between text-center p-0">
       {/* Header con fondo blanco y logo */}
@@ -24,18 +26,31 @@ export default function LandingPage() {
           Operaciones
         </a>
         <a
-          href="https://wa.me/50761503116"
+          href="https://wa.me/50766152533"
           className="block bg-green-500 text-white py-3 rounded-xl shadow hover:bg-green-600 transition"
         >
           Administración
         </a>
         <a
-          href="https://wa.me/50761507636"
+          href="https://wa.me/50761503116"
           className="block bg-green-500 text-white py-3 rounded-xl shadow hover:bg-green-600 transition"
         >
-          Supervisor
+          Ventas
         </a>
+
+        <button
+          onClick={() => setIsFormOpen(true)}
+          className="block w-full bg-orange-500 text-white py-3 rounded-xl shadow hover:bg-orange-600 transition"
+        >
+          Contáctanos
+        </button>
       </section>
+
+      {/* Formulario modal */}
+      <Form
+        isOpen={isFormOpen}
+        onClose={() => setIsFormOpen(false)}
+      />
 
       {/* Descripción */}
       <section className="px-4 mb-6 max-w-md text-gray-800">
