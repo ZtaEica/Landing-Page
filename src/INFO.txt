@@ -1,0 +1,9 @@
+Correo vinculado al EmailJS
+Gmail o Google:
+PYCSAWeb
+correo: pycsawebsite1@gmail.com
+contraseña: pycsa1234
+EmailJS
+PYCSA
+correo:pycsawebsite1@gmail.com
+contraseña: pycsa1234

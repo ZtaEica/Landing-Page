@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import Form from './components/ContactanosForm';
 
 export default function LandingPage() {
@@ -23,19 +23,19 @@ export default function LandingPage() {
           href="https://wa.me/50761503513"
           className="block bg-green-500 text-white py-3 rounded-xl shadow hover:bg-green-600 transition"
         >
-          Operaciones
+          WhatsApp de Operaciones
         </a>
         <a
           href="https://wa.me/50766152533"
           className="block bg-green-500 text-white py-3 rounded-xl shadow hover:bg-green-600 transition"
         >
-          Administración
+          WhatsApp de Administración
         </a>
         <a
-          href="https://wa.me/50761503116"
+          href="https://wa.me/50762335535"
           className="block bg-green-500 text-white py-3 rounded-xl shadow hover:bg-green-600 transition"
         >
-          Ventas
+          WhatsApp de Ventas
         </a>
 
         <button
@@ -82,13 +82,16 @@ export default function LandingPage() {
             <FontAwesomeIcon icon={faInstagram} />
           </a>
           <a
-            href="mailto:contacto@proteccionycontrol.com"
+            href="mailto:ventas@seguridadproteccionycontrol.com"
             className="hover:text-orange-500"
           >
             <FontAwesomeIcon icon={faEnvelope} />
           </a>
         </div>
-        <p>📍 Ciudad de Panamá, Panamá</p>
+        <p>
+          {' '}
+          <FontAwesomeIcon icon={faLocationDot} /> Ciudad de Panamá, Panamá
+        </p>
         <p>&copy; 2025 Protección y Control S.A.</p>
       </footer>
     </div>
