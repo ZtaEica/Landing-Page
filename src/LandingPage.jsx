@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
@@ -53,13 +54,19 @@ export default function LandingPage() {
       />
 
       {/* Descripción */}
-      <section className="px-4 mb-6 max-w-md text-gray-800">
+      <section className="px-4 mb-6 max-w-md space-y-4 text-gray-800">
         <p className="text-base leading-relaxed">
           <strong>Protección y Control S.A.</strong> ofrece soluciones de
           seguridad física y tecnológica. Brindamos control de acceso, rondines,
           vigilancia en PH y residenciales, con personal capacitado y tecnología
           avanzada.
         </p>
+        <Link
+          to="/nosotros"
+          className="block w-40 m-auto bg-orange-500 text-white py-3 rounded-xl shadow hover:bg-orange-600 transition"
+        >
+          Nosotros
+        </Link>
       </section>
 
       {/* Footer */}
