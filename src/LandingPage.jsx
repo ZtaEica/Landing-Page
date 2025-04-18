@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import {
+  faChevronRight,
+  faEnvelope,
+  faLocationDot,
+} from '@fortawesome/free-solid-svg-icons';
 import { ArrowRight } from 'lucide-react';
 import Form from './components/ContactanosForm';
 
@@ -107,9 +111,15 @@ export default function LandingPage() {
         </p>
         <Link
           to="/nosotros"
-          className="relative w-[150px] h-[50px] m-auto text-white text-[23px] tracking-[3px] font-semibold font-sans outline-none cursor-pointer overflow-hidden transition-all duration-500 shadow-sm hover:rotate-[-3deg] hover:scale-[1.1] hover:shadow-md flex items-center justify-center bg-gradient-to-l from-[#fb7519] to-[#e75d00]"
+          className="relative w-[200px] h-[50px] m-auto text-white text-[23px] tracking-[3px] font-semibold font-sans outline-none cursor-pointer overflow-hidden transition-all duration-500 shadow-sm hover:rotate-[-3deg] hover:scale-[1.1] hover:shadow-md flex items-center justify-center bg-gradient-to-l from-[#fb7519] to-[#e75d00]"
         >
-          Nosotros
+          <div className="flex items-center gap-2">
+            <p className="leading-none">Nosotros</p>
+            <FontAwesomeIcon
+              icon={faChevronRight}
+              className="text-base mt-[1px]"
+            />
+          </div>
           <span className="span1"></span>
           <span className="span2"></span>
           <span className="span3"></span>
