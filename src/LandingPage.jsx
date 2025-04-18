@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { ArrowRight } from 'lucide-react';
 import Form from './components/ContactanosForm';
 
 export default function LandingPage() {
@@ -22,28 +23,71 @@ export default function LandingPage() {
       <section className="my-8 w-full max-w-md space-y-4 px-2">
         <a
           href="https://wa.me/50761503513"
-          className="block bg-green-500 text-white py-3 rounded-xl shadow hover:bg-green-600 transition"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group relative inline-flex w-full items-center justify-center rounded-xl border border-gray-300 bg-white px-6 py-2 font-semibold text-gray-800 shadow-md transition-all duration-500 hover:shadow-xl hover:border-green-400 overflow-hidden"
         >
-          WhatsApp de Operaciones
+          <span className="absolute inset-0 z-0 -skew-x-14 -translate-x-full bg-gradient-to-r from-green-400 to-green-600 transition-transform duration-700 ease-out group-hover:translate-x-0 rounded-xl"></span>
+          <span className="relative z-10 transition-all duration-300 group-hover:-translate-x-1 group-hover:text-white">
+            WhatsApp de Operaciones
+          </span>
+          <span className="absolute right-4 z-10 translate-x-2 opacity-0 text-white transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+            <ArrowRight
+              size={18}
+              strokeWidth={2.5}
+            />
+          </span>
         </a>
+
         <a
           href="https://wa.me/50766152533"
-          className="block bg-green-500 text-white py-3 rounded-xl shadow hover:bg-green-600 transition"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group relative inline-flex w-full items-center justify-center rounded-xl border border-gray-300 bg-white px-6 py-2 font-semibold text-gray-800 shadow-md transition-all duration-500 hover:shadow-xl hover:border-green-400 overflow-hidden"
         >
-          WhatsApp de Administración
+          <span className="absolute inset-0 z-0 -skew-x-14 -translate-x-full bg-gradient-to-r from-green-400 to-green-600 transition-transform duration-700 ease-out group-hover:translate-x-0 rounded-xl"></span>
+          <span className="relative z-10 transition-all duration-300 group-hover:-translate-x-1 group-hover:text-white">
+            WhatsApp de Administración
+          </span>
+          <span className="absolute right-4 z-10 translate-x-2 opacity-0 text-white transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+            <ArrowRight
+              size={18}
+              strokeWidth={2.5}
+            />
+          </span>
         </a>
         <a
           href="https://wa.me/50762335535"
-          className="block bg-green-500 text-white py-3 rounded-xl shadow hover:bg-green-600 transition"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group relative inline-flex w-full items-center justify-center rounded-xl border border-gray-300 bg-white px-6 py-2 font-semibold text-gray-800 shadow-md transition-all duration-500 hover:shadow-xl hover:border-green-400 overflow-hidden"
         >
-          WhatsApp de Ventas
+          <span className="absolute inset-0 z-0 -skew-x-14 -translate-x-full bg-gradient-to-r from-green-400 to-green-600 transition-transform duration-700 ease-out group-hover:translate-x-0 rounded-xl"></span>
+          <span className="relative z-10 transition-all duration-300 group-hover:-translate-x-1 group-hover:text-white">
+            WhatsApp de Operaciones
+          </span>
+          <span className="absolute right-4 z-10 translate-x-2 opacity-0 text-white transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+            <ArrowRight
+              size={18}
+              strokeWidth={2.5}
+            />
+          </span>
         </a>
 
         <button
           onClick={() => setIsFormOpen(true)}
-          className="block w-full bg-orange-500 text-white py-3 rounded-xl shadow hover:bg-orange-600 transition"
+          className="group relative inline-flex w-full items-center justify-center rounded-xl border border-gray-300 bg-white px-6 py-2 font-semibold text-gray-800 shadow-md transition-all duration-500 hover:shadow-xl hover:border-orange-400 overflow-hidden"
         >
-          Contáctanos
+          <span className="absolute inset-0 z-0 -skew-x-14 -translate-x-full bg-gradient-to-r from-orange-400 to-orange-600 transition-transform duration-700 ease-out group-hover:translate-x-0 rounded-xl"></span>
+          <span className="relative z-10 transition-all duration-300 group-hover:-translate-x-1 group-hover:text-white">
+            Contáctanos
+          </span>
+          <span className="absolute right-4 z-10 translate-x-2 opacity-0 text-white transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+            <ArrowRight
+              size={18}
+              strokeWidth={2.5}
+            />
+          </span>
         </button>
       </section>
 
@@ -54,7 +98,7 @@ export default function LandingPage() {
       />
 
       {/* Descripción */}
-      <section className="px-4 mb-6 max-w-md space-y-4 text-gray-800">
+      <section className="px-4 max-w-md space-y-4 text-gray-800">
         <p className="text-base leading-relaxed">
           <strong>Protección y Control S.A.</strong> ofrece soluciones de
           seguridad física y tecnológica. Brindamos control de acceso, rondines,
@@ -63,9 +107,13 @@ export default function LandingPage() {
         </p>
         <Link
           to="/nosotros"
-          className="block w-40 m-auto bg-orange-500 text-white py-3 rounded-xl shadow hover:bg-orange-600 transition"
+          className="relative w-[150px] h-[50px] m-auto text-white text-[23px] tracking-[3px] font-semibold font-sans outline-none cursor-pointer overflow-hidden transition-all duration-500 shadow-sm hover:rotate-[-3deg] hover:scale-[1.1] hover:shadow-md flex items-center justify-center bg-gradient-to-l from-[#fb7519] to-[#e75d00]"
         >
           Nosotros
+          <span className="span1"></span>
+          <span className="span2"></span>
+          <span className="span3"></span>
+          <span className="span4"></span>
         </Link>
       </section>
 

@@ -5,15 +5,24 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import logo from '../assets/logo-remove.png';
-import img1 from '../assets/guard.jpg';
+//import img1 from '../assets/guard.jpg';
 import img2 from '../assets/guard1.jpg';
 import img3 from '../assets/guard2.jpg';
 import img4 from '../assets/guard3.jpg';
 import img5 from '../assets/guard4.jpg';
-import img6 from '../assets/guard6.jpg';
+import img6 from '../assets/guard5.jpg';
+import img7 from '../assets/guard6.jpg';
+import img8 from '../assets/guard7.jpeg';
+import img9 from '../assets/guard8.jpg';
+//import img10 from '../assets/guard9.jpeg';
+import img11 from '../assets/guard10.jpeg';
+import img12 from '../assets/guard11.jpeg';
+//import img13 from '../assets/guard12.jpeg';
+import img14 from '../assets/guard13.jpg';
+import img15 from '../assets/guard14.jpg';
 
-const Nosotros = () => {
-  const collageImages = [img1, img6, img3, img4, img5];
+export default function Nosotros() {
+  const collageImages = [img7, img6, img3, img4, img5];
 
   const services = [
     {
@@ -26,13 +35,13 @@ const Nosotros = () => {
       title: 'Monitoreo 24/7',
       desc: 'Vigilancia en tiempo real con tecnología avanzada.',
       icon: '📹',
-      image: img2,
+      image: img14,
     },
     {
       title: 'Control de Accesos',
       desc: 'Sistemas modernos de ingreso y registro digital.',
       icon: '🔐',
-      image: img2,
+      image: img15,
     },
   ];
 
@@ -45,7 +54,7 @@ const Nosotros = () => {
     >
       <div className="min-h-screen bg-white bg-[linear-gradient(0deg,_#e5e7eb_1px,_transparent_1px),_linear-gradient(90deg,_#e5e7eb_1px,_transparent_1px)] bg-[size:50px_50px]">
         {/* Misión, Visión, Valores con collage desordenado */}
-        <section className="max-w-7xl mx-10 px-6 py-16 flex flex-col lg:flex-row items-center gap-6">
+        <section className="max-w-7xl mx-auto px-6 py-16 flex flex-col lg:flex-row lg:mx-12 items-center gap-12">
           {/* Texto */}
           <div className="lg:w-1/2 space-y-10">
             <div className="max-w-7xl mx-auto">
@@ -57,7 +66,7 @@ const Nosotros = () => {
                   <img
                     src={logo}
                     alt="Logo"
-                    className="w-20 h-auto"
+                    className="w-[100px] h-auto"
                   />
                 </Link>
               </div>
@@ -150,6 +159,44 @@ const Nosotros = () => {
             </div>
           </div>
         </section>
+        {/* Nueva Sección Final de Collage Moderno */}
+        <section className="py-20 px-6">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-4xl font-extrabold text-center mb-12">
+              En Acción
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="col-span-2 row-span-2">
+                <img
+                  src={img11}
+                  alt=""
+                  className="w-full h-full object-cover rounded-2xl shadow-lg"
+                />
+              </div>
+              <div>
+                <img
+                  src={img12}
+                  alt=""
+                  className="w-full h-full object-cover rounded-2xl shadow-md"
+                />
+              </div>
+              <div>
+                <img
+                  src={img8}
+                  alt=""
+                  className="w-full h-full object-cover rounded-2xl shadow-md"
+                />
+              </div>
+              <div className="col-span-2">
+                <img
+                  src={img9}
+                  alt=""
+                  className="w-full h-full object-cover rounded-2xl shadow-md"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
       <footer className="w-full bg-gray-900 text-center text-gray-300 text-sm py-6">
         <div className="flex justify-center gap-6 text-xl mb-4">
@@ -184,6 +231,4 @@ const Nosotros = () => {
       </footer>
     </motion.div>
   );
-};
-
-export default Nosotros;
+}
